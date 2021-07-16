@@ -38,7 +38,7 @@ const addPools = function () {
             $(card).find('#data-token-store').attr('data-token', tokenId);
             $(card).find('#token-symbol').text(pool.stakingToken);
             $(card).find('.token-logo-1').attr('src', '/assets/images/tokens/' + pool.stakingToken + '.png');
-            $(card).find('.token-logo-2').attr('src', '/assets/images/tokens/' + pool.rewardToken + '.png');
+            //$(card).find('.token-logo-2').attr('src', '/assets/images/tokens/' + pool.rewardToken + '.png');
             $(card).find('.display--user-balance').attr('data-token', tokenId);
             $('#container--pools').append(card);
 
@@ -51,41 +51,29 @@ const afterWalletConnect = function () {
 }
 
 $(document).ready(function () {
-    /*$('#pool-details-dialog').dialog({
-        autoOpen: false,
-        width: 1000,
-        modal: true,
-        width: 'auto',
-        open: function (event, ui) {
-            $('.ui-widget-overlay').bind('click', function () {
-                $('#pool-details-dialog').dialog('close');
-            });
-        }
-    });*/
+    connectWallet();
     queryKCSPrice();
     setInterval(queryKCSPrice, 1000 * 60 * 10); //Query KCS price every 10 minutes
-    connectWallet();
+
     addPools();
     initEvents();
 });
 
 const initEvents = function () {
-    /*$(function () {
-        $("#dialog-confirm").dialog({
-            resizable: false,
-            height: "auto",
-            width: 800,
-            modal: true,
-            buttons: {
-                "Delete all items": function () {
-                    $(this).dialog("close");
-                },
-                Cancel: function () {
-                    $(this).dialog("close");
-                }
-            }
+    window.ethereum.on('accountsChanged', function (accounts) {
+        account = accounts[0];
+        $('#account-address').show();
+        $('#connect-wallet-btn').remove();
+        $('#account-address').text(account);
+        updateEverything();
+    });
+    $('#wallet-connect-dialog').on('show.bs.modal', function (event) {
+
+        window.ethereum.request({ method: 'eth_requestAccounts' }).then(function () {
+            connectWallet();
         });
-    });*/
+    })
+
     $('#pool-details-dialog').on('show.bs.modal', function (event) {
         $(this).modal('handleUpdate');
         var button = $(event.relatedTarget) // Button that triggered the modal
@@ -95,17 +83,10 @@ const initEvents = function () {
         $('#pool-details-dialog').data('pool', poolId);
         var modal = $(this)
         modal.find('.modal-title').text('Manage ' + pool.stakingToken + ' pool')
+        modal.find('#token-logo').attr('src', '/assets/images/tokens/' + pool.stakingToken + '.png');
         $('#pool-details-dialog input[type="text"]').val('');
     })
-    $('#pools').on('click', '.open-details', function (e) {
-        var container = $(e.target).parents('.pool--container');
-        var poolId = container.data('pool');
-        var pool = getPoolById(poolId);
-        $('#pool-details-dialog').data('pool', poolId);
-        $('#pool-details-dialog').dialog('option', 'title', 'Manage ' + pool.stakingToken + ' pool');
-        $('#pool-details-dialog input[type="text"]').val('');
-        $('#pool-details-dialog').dialog('open');
-    });
+
     $('#pools').on('click', '.pool--container', function (e) {
         $(e.target).find('.toggle-container').trigger('click');
     });

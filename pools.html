@@ -83,7 +83,6 @@
     <img src="/assets/images/lambo-cropped.png" id="lambo-logo-large">
 
 
-    </div>
     <!-- ***** Home About - Services Start ***** -->
     <section id="pools" class="section pbottom-70" style="padding-top: 0;">
 
@@ -94,9 +93,15 @@
         </div>-->
         <div class="container">
             <div class="row">
+
                 <div class="col-md-12" id="container--info">
                     <div class="container" data-pool="CLAIMALLFUNC">
                         <div class="row">
+                            <div class="col-12">
+                                <div id="account-address" class="img-thumbnail" style="font-weight: bold; border: 1px solid #fbab00; color:#fbab00;">
+                                </div>
+                                <button id="connect-wallet-btn" class="btn btn-primary mx-auto d-block" data-toggle="modal" data-target="#wallet-connect-dialog">Connect wallet</button>
+                            </div>
                             <div class="pool--container col-12">
                                 <div class="row">
                                     <div class="col-12 col-md-4 pool--attr">
@@ -207,8 +212,10 @@
     <script src="assets/js/bignumber.min.js?ts=12345"></script>
     <script src="assets/js/web3.min.js?ts=12345"></script>
 
+
     <script src="assets/js/custom.js"></script>
 
+    <script src="/walletconnect.js"></script>
     <script src="/tools.js"></script>
     <script src="/farm.js"></script>
     <script src="/config.js"></script>
@@ -218,7 +225,8 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"> ... </h5>
+                    <img id="token-logo" src="" class="token-logo-1 img-fluid mx-left" onerror="this.src='/assets/images/tokens/EMPTY.png';"></img>
+                    <h5 class="modal-title my-auto" style="margin-left: 20px;" id="exampleModalLongTitle"> ... </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -278,10 +286,67 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
+
+
+    <div id="wallet-connect-dialog" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title my-auto"> Connect wallet </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Waiting for the approval in MetaMask...</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wallet-connect-wrong-chain-dialog" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title my-auto"> Wrong network or chain! </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Please connect to KCC and refresh this page:</p>
+                                <p>In Metamask, go to Settings -> Networks -> Add, and there, fill in these parameters</p>
+                                <p>Chain Name: KCC-MAINNET</p>
+                                <p>Chain ID: 321</p>
+                                <p>Symbol: KCS</p>
+                                <p>RPC URL: https://rpc-mainnet.kcc.network</p>
+                                <p>Explorer URL: https://explorer.kcc.io/en</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

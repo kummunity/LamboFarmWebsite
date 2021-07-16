@@ -112,16 +112,13 @@ form input[type="submit"] {
 
 .token-logo-container{
     position:relative; 
-    width: 50px;
-    height: 30px; 
     display: inline-block;
 }
 .token-logo-1, .token-logo-2{
-    width: 30px; 
+    width: 50px; 
     height: auto;
     padding:0px;
     margin:0px;
-    position: absolute;
     left:0;
     top: 0;
 }
@@ -210,7 +207,9 @@ nav .navbar-brand {
 .btn-primary:hover {
     background-color: #cea141 !important;
 }
-
+.modal-header {
+    background-color: #fbab00 !important;
+}
 #lambo-logo-large {
     width: 60%;
     max-width: 1000px;

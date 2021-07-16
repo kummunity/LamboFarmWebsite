@@ -511,17 +511,17 @@ const updatePool = function (address) {
     var stakingToken = getTokenBySymbol(pool.stakingToken);
 
     // pool
-    if (totalStaked[address] > 0) {
+    if (totalStaked[address] >= 0) {
         $('*[data-pool="' + getPoolId(pool) + '"] .display--total-staked').html(
             fv(weiToDecimal(totalStaked[address], pool.stakingToken))
         );
     }
-    if (userRewardsPools[address] > 0) {
+    if (userRewardsPools[address] >= 0) {
         $('*[data-pool="' + getPoolId(pool) + '"] .display--user-reward').html(
             fv(weiToDecimal(userRewardsPools[address], pool.rewardToken))
         );
     }
-    if (userBalancesPools[address] > 0) {
+    if (userBalancesPools[address] >= 0) {
         $('*[data-pool="' + getPoolId(pool) + '"] .display--user-staked').html(
             fv(weiToDecimal(userBalancesPools[address], pool.stakingToken))
         );
@@ -591,7 +591,7 @@ const updateInfo = function () {
     for (var i = 0; i < pools.length; i++) {
         totalTVL += getTVL(pools[i]);
     }
-    if (totalTVL > 0) {
+    if (totalTVL >= 0) {
         value = fv(totalTVL) + ' KCS';
         if (kcs_usd_price > 0) {
             value += "<br />";
@@ -604,7 +604,7 @@ const updateInfo = function () {
     for (var i = 0; i < pools.length; i++) {
         totalRewards += weiToDecimal(userRewardsPools[pools[i].address], pools[i].rewardToken);
     }
-    if (totalRewards > 0) {
+    if (totalRewards >= 0) {
         value = fv(totalRewards) + ' LAMBO';
         if (kcs_usd_price > 0) {
             value += "<br />";

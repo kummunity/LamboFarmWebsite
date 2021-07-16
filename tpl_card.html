@@ -1,18 +1,19 @@
 <div class="pool--container col-lg-6 col-xl-4 col-md-12" data-pool="">
     <div class="row align-items-center">
-        <div class="offset-2 col-8 title align-self-center">
-
+        <div class="col-2 title align-self-center">
+            <span class="token-logo-container text-center align-middle">
+                <img class="token-logo-1 img-fluid mx-auto" onerror="this.src='/assets/images/tokens/EMPTY.png';"></img>
+                <!--<img class="token-logo-2 img-fluid mx-auto" onerror="this.src='/assets/images/tokens/EMPTY.png';"></img>-->
+            </span>
+        </div>
+        <div class="col-8 title align-self-center">
             <h5 class="text-center align-middle">
-                <span class="token-logo-container text-center align-middle">
-                    <img class="token-logo-1 img-fluid mx-auto" onerror="this.src='/assets/images/tokens/EMPTY.png';"></img>
-                    <img class="token-logo-2 img-fluid mx-auto" onerror="this.src='/assets/images/tokens/EMPTY.png';"></img>
-                </span>
                 <strong class="text-center align-middle" id="token-symbol"></strong>
             </h5>
         </div>
         <div class="col-2 p-0">
-            <button class="btn-xs btn btn-outline-dark float-right" data-toggle="modal" data-target="#pool-details-dialog">
-                <span class="justify-content-center">...</span></button>
+            <button class="btn-xs btn btn-outline-dark float-right navbar-light" data-toggle="modal" data-target="#pool-details-dialog" onclick="this.blur();">
+                <span class=" navbar-toggler-icon"></span>
         </div>
     </div>
     <div class="row">
