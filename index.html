@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,303 +40,277 @@
 
 <body>
 
-<!-- ***** Preloader Start ***** -->
-<div class="loader-wrapper">
-    <div class="center">
-        <div class="dot dot-one"></div>
-        <div class="dot dot-two"></div>
-        <div class="dot dot-three"></div>
-        <div class="dot dot-four"></div>
-        <div class="dot dot-five"></div>
-    </div>
-</div>
-<!-- ***** Preloader End ***** -->
-
-<!-- ***** Header Area Start ***** -->
-<header class="header-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="home.html" class="logo">
-                        <!-- <img src="assets/images/flokihead.png" style="width: 50px;" class="light-logo"
-                            alt="Beapp" />
-                        <img src="assets/images/flokihead.png" style="width: 50px;" class="dark-logo" alt="Beapp" /> -->
-                    </a>
-                    <!-- ***** Logo End ***** -->
-
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="pools.html">POOLS</a></li>
-                        <li><a href="https://dex.kandyswap.com/#/swap?inputCurrency=KCS&outputCurrency=0x041a33502ba2ab0d73f400564cfaa696b2ac8b64" target="_blank"
-                               class="btn-nav-line coming-soon"><span class="txt-hover">BUY $LAMBO</span><span class="txt-reg">BUY $LAMBO</span></a></li>
-                    </ul>
-                    <a class="menu-trigger">
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
+    <!-- ***** Preloader Start ***** -->
+    <div class="loader-wrapper">
+        <div class="center">
+            <div class="dot dot-one"></div>
+            <div class="dot dot-two"></div>
+            <div class="dot dot-three"></div>
+            <div class="dot dot-four"></div>
+            <div class="dot dot-five"></div>
         </div>
     </div>
-</header>
-<!-- ***** Header Area End ***** -->
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="#">$LAMBO Farm</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- ***** Menu Start ***** -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pools.html">Pools</a></li>
+                    <li class="nav-item"><button class="btn btn-primary" href="https://dex.kandyswap.com/#/swap?inputCurrency=KCS&outputCurrency=0x041a33502ba2ab0d73f400564cfaa696b2ac8b64" target="_blank">BUY $LAMBO</button></li>
+                </ul>
+            </div>
+            <!-- ***** Menu End ***** -->
+        </nav>
+    </header>
+    <!-- ***** Header Area End ***** -->
 
 
-<section class="welcome-area">
-    <!-- ***** Wellcome Area Background Start ***** -->
-    <div class="welcome-bg" data-bg="assets/images/lambo-main.jpg">
-        <img src="assets/images/bg-bottom.svg" alt="">
-    </div>
-    <!-- ***** Wellcome Area Background End ***** -->
+    <section class="welcome-area">
+        <!-- ***** Wellcome Area Content Start ***** -->
+        <div class="welcome-content">
+            <div class="container-fluid">
+                <div class="row">
 
-    <!-- ***** Wellcome Area Content Start ***** -->
-    <div class="welcome-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 align-self-center">
-                    <h1 class="flokiHeader" style="font-size: 64px;color: #fff;-webkit-text-stroke: 1px 384DFF;">$LAMBO Farming</h1>
-                    <p style="font-size: 20px;color: #fff;font-weight: bold;"><span style="font-style: italic;">Farm yourself a Lambo</p>
-                </div>
-                <div class="offset-lg-1 col-lg-4 col-md-12 col-sm-12 col-xs-12 align-self-center">
-                    <div class="apps">
-                        <div class="container-fluid">
+                    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 order-lg-1">
+                        <div class="apps">
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                                    &nbsp;
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                                    &nbsp;
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                                    <a href="https://dex.kandyswap.com/#/swap?inputCurrency=KCS&outputCurrency=0x041a33502ba2ab0d73f400564cfaa696b2ac8b64"
-                                       target="_blank" class="app-item">
+                                <div class="col-6 col-md-2 offset-md-1">
+                                    <a href="https://dex.kandyswap.com/#/swap?inputCurrency=KCS&outputCurrency=0x041a33502ba2ab0d73f400564cfaa696b2ac8b64" target="_blank" class="app-item">
                                         <div class="icon" style="box-shadow:none;">
-                                            <img src="https://www.kandyswap.info/static/media/ks-png.69633e3b.png"
-                                                 class="img-fluid" alt="">
+                                            <img src="https://www.kandyswap.info/static/media/ks-png.69633e3b.png" class="img-fluid rounded mx-auto d-block" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                                    <a href="https://explorer.kcc.io/de/token/0x041a33502ba2ab0d73f400564cfaa696b2ac8b64"
-                                       target="_blank" class="app-item">
+                                <div class="col-6 col-md-2">
+                                    <a href="https://explorer.kcc.io/de/token/0x041a33502ba2ab0d73f400564cfaa696b2ac8b64" target="_blank" class="app-item">
                                         <div class="icon" style="box-shadow:none;">
-                                            <img src="https://static.explorer.kcc.io/_nuxt/img/kcs-logo-header.d72bd98.svg"
-                                                 class="img-fluid" alt="">
+                                            <img src="https://static.explorer.kcc.io/_nuxt/img/kcs-logo-header.d72bd98.svg" class="img-fluid rounded mx-auto d-block" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                                    &nbsp;
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="col-4 col-md-2">
                                     <a href="https://github.com/LamboFarm/LamboFarmContracts" target="_blank" class="app-item">
                                         <div class="icon" style="box-shadow:none;">
-                                            <img src="assets/images/GitHub-Mark-64px.png"
-                                                 class="img-fluid" alt="">
+                                            <img src="assets/images/GitHub-Mark-64px.png" class="img-fluid rounded mx-auto d-block" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="col-4 col-md-2">
                                     <a href="https://twitter.com/lambofarmKCC" target="_blank" class="app-item">
                                         <div class="icon" style="box-shadow:none;">
-                                            <img src="https://www.erunga.net/wp-content/uploads/twitter-logo.png"
-                                                 class="img-fluid" alt="">
+                                            <img src="https://www.erunga.net/wp-content/uploads/twitter-logo.png" class="img-fluid rounded mx-auto d-block" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="col-4 col-md-2">
                                     <a href="https://t.me/lambofarm" target="_blank" class="app-item">
                                         <div class="icon" style="box-shadow:none;">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png"
-                                                 class="img-fluid" alt="">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" class="img-fluid rounded mx-auto d-block" alt="">
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Wellcome Area Content End ***** -->
-</section>
-
-<section id="aboutus" class="section services-section pbottom-70">
-    <div class="container">
-        <div class="row">
-            <!-- ***** Home About Start ***** -->
-            <div class="col-lg-5 col-md-12 col-sm-12 align-self-bottom">
-                <div class="left-heading">
-                    <h2 class="section-title flokiHeader">About Us</h2>
-                </div>
-                <div class="left-text">
-                    <p style="font-size: 12px;">$LAMBO is a hyper-deflationary token that rewards users automatically with more $LAMBO straight to your wallet for simply holding. In other words - hold, sit back, relax and watch your $LAMBO grow!</p>
-                    <p style="font-size: 12px;">$LAMBO is 100% fair launched and one of the first farming projects on KCC and the first to implement multi-coin farming. Deposit your favourite KCC based coins and earn $LAMBO. Deposit $LAMBO to earn even more $LAMBO and deposit $LAMBO-KCS LP pair from Kandyswap to earn the most $LAMBO.</p>
-                    <p style="font-size: 12px;">$LAMBO platform will include even more farms in the future, with community voting for which coins we should add vaults for next.</p>
-                </div>
-                <a class="btn-primary-line primary-color-gradient"
-                   style="width: 100%;font-size: 12px;cursor: text; color:#FFF;">0x041a33502ba2ab0d73f400564cfaa696b2ac8b64</a>
-            </div>
-            <!-- ***** Home About End ***** -->
-
-            <!-- ***** Home Services Start ***** -->
-            <div class="offset-lg-1 col-lg-6 col-md-12 col-sm-12 align-self-bottom">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a href="#" class="home-services-item"
-                           data-scroll-reveal="enter bottom move 30px over 0.6s after 0.2s">
-                            <i class="fa fa-lock"></i>
-                            <h5 class="services-title">Fair Launch</h5>
-                            <p>No pre-sale, no bots - $LAMBO token can only be farmed on the Lambo Platform.</p>
-                        </a>
-                        <a href="#" class="home-services-item"
-                           data-scroll-reveal="enter bottom move 30px over 0.6s after 0.2s">
-                            <i class="fa fa-users"></i>
-                            <h5 class="services-title">Community</h5>
-                            <p>Our community means everything to us and is our main focus.</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a href="#" class="home-services-item active"
-                           data-scroll-reveal="enter bottom move 30px over 0.6s after 0.3s">
-                            <i class="fa fa-money"></i>
-                            <h5 class="services-title">Rewards</h5>
-                            <p>Get rewarded just by holding our token.</p>
-                        </a>
-                        <a href="#" class="home-services-item"
-                           data-scroll-reveal="enter bottom move 30px over 0.6s after 0.3s">
-                            <i class="fa fa-code"></i>
-                            <h5 class="services-title">Developers</h5>
-                            <p>We have the best and most experienced developers on our team.</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Home Services End ***** -->
-        </div>
-    </div>
-</section>
-
-
-<section id="tokenomics" class="section pbottom-70">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="center-heading">
-                    <h2 class="section-title flokiHeader">Tokenomics</h2>
-                </div>
-            </div>
-            <div class="offset-lg-3 col-lg-6">
-                <div class="center-text">
-                    <p class="flokiHeader">Every transaction of LAMBO consists of</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="blog-post-thumb">
-                    <div class="img">
-                        <img src="assets/images/lambo_money.png" alt="" style="max-width:300px;height:auto;">
-                    </div>
-                    <h3>
-                        <a class="flokiHeader" href="blog-single.html">Redistribution</a>
-                    </h3>
-                    <div class="text">
-                        To reward holders of the token we redistribute <span style="color: #ffcb48;font-weight: bold;">4%</span> of every transaction to all holders of the token
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="blog-post-thumb">
-                    <div class="img">
-                        <img src="assets/images/lambo_liquidity.png" alt="">
-                    </div>
-                    <h3>
-                        <a class="flokiHeader" href="blog-single.html">Liquidity</a>
-                    </h3>
-                    <div class="text">
-                        If we want the token to go up in value we need the liquidity pool to grow as well. This is why <span style="color: #ffcb48;font-weight: bold;">4%</span> of every transaction goes towards liquidity
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 justify-content-center">
-                <div class="blog-post-thumb">
-                    <div class="img">
-                        <img src="assets/images/lambo_marketing.png" alt="">
-                    </div>
-                    <h3>
-                        <a class="flokiHeader" href="blog-single.html">Pool Replenishment</a>
-                    </h3>
-                    <div class="text">
-                        <span style="color: #ffcb48;font-weight: bold;">2%</span> of the tokens are reverted to the Lambo Platform to be used to incentivise pools beyond the initial period.
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 order-lg-0">
+                        <h1 class="flokiHeader" style="font-size: 4em;color: #1a1a1a;-webkit-text-stroke: 1px 384DFF;padding-bottom: 0px;">
+                            $LAMBO Farming</h1>
+                        <p style="font-size: 1.1em;color: #ffc64d;font-weight: bold;"><span style="font-style: italic;">Farm
+                                yourself a Lambo</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <!-- ***** Wellcome Area Content End ***** -->
+    </section>
 
-<!-- ***** Footer Start ***** -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-12 col-sm-12">
-                <h5>$LAMBO</h5>
-                <div class="text"><span style="font-style: italic;">"My new car will be a LAMBO"</span> ~Elon Musk</p>
+    <section id="aboutus" class="section services-section pbottom-70" style="padding-top: 0px; margin-top: 0px;">
+        <div class="container">
+            <div class="row">
+                <!-- ***** Home About Start ***** -->
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-bottom">
+                    <div class="left-heading">
+                        <h2 class="section-title flokiHeader">About Us</h2>
+                    </div>
+                    <div class="left-text">
+                        <p style="font-size: 12px;">$LAMBO is a hyper-deflationary token that rewards users
+                            automatically with more $LAMBO straight to your wallet for simply holding. In other words -
+                            hold, sit back, relax and watch your $LAMBO grow!</p>
+                        <p style="font-size: 12px;">$LAMBO is 100% fair launched and one of the first farming projects
+                            on KCC and the first to implement multi-coin farming. Deposit your favourite KCC based coins
+                            and earn $LAMBO. Deposit $LAMBO to earn even more $LAMBO and deposit $LAMBO-KCS LP pair from
+                            Kandyswap to earn the most $LAMBO.</p>
+                        <p style="font-size: 12px;">$LAMBO platform will include even more farms in the future, with
+                            community voting for which coins we should add vaults for next.</p>
+                    </div>
+                    <a class="btn-primary-line primary-color-gradient" style="width: 100%;font-size: 12px;cursor: text; color:#FFF;">0x041a33502ba2ab0d73f400564cfaa696b2ac8b64</a>
+                </div>
+                <!-- ***** Home About End ***** -->
+
+                <!-- ***** Home Services Start ***** -->
+                <div class="offset-lg-1 col-lg-6 col-md-12 col-sm-12 align-self-bottom">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <a href="#" class="home-services-item" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.2s">
+                                <i class="fa fa-lock"></i>
+                                <h5 class="services-title">Fair Launch</h5>
+                                <p>No pre-sale, no bots - $LAMBO token can only be farmed on the Lambo Platform.</p>
+                            </a>
+                            <a href="#" class="home-services-item" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.2s">
+                                <i class="fa fa-users"></i>
+                                <h5 class="services-title">Community</h5>
+                                <p>Our community means everything to us and is our main focus.</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <a href="#" class="home-services-item active" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.3s">
+                                <i class="fa fa-money"></i>
+                                <h5 class="services-title">Rewards</h5>
+                                <p>Get rewarded just by holding our token.</p>
+                            </a>
+                            <a href="#" class="home-services-item" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.3s">
+                                <i class="fa fa-code"></i>
+                                <h5 class="services-title">Developers</h5>
+                                <p>We have the best and most experienced developers on our team.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Home Services End ***** -->
+            </div>
+        </div>
+    </section>
+
+
+    <section id="tokenomics" class="section pbottom-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title flokiHeader">Tokenomics</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p class="flokiHeader">Every transaction of LAMBO consists of</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <h5>Socials</h5>
-                <ul class="footer-nav">
-                    <li><a href="https://t.me/lambofarm" target="_blank"><i class="fa fa-angle-right"></i><span>Telegram</span></a></li>
-                    <li><a href="https://twitter.com/lambofarmKCC" target="_blank"><i class="fa fa-angle-right"></i><span>Twitter</span></a></li>
-                </ul>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/lambo_money.png" alt="" style="max-width:300px;height:auto;">
+                        </div>
+                        <h3>
+                            <a class="flokiHeader" href="blog-single.html">Redistribution</a>
+                        </h3>
+                        <div class="text">
+                            To reward holders of the token we redistribute <span style="color: #ffcb48;font-weight: bold;">4%</span> of every transaction to all holders
+                            of the token
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/lambo_liquidity.png" alt="">
+                        </div>
+                        <h3>
+                            <a class="flokiHeader" href="blog-single.html">Liquidity</a>
+                        </h3>
+                        <div class="text">
+                            If we want the token to go up in value we need the liquidity pool to grow as well. This is
+                            why <span style="color: #ffcb48;font-weight: bold;">4%</span> of every transaction goes
+                            towards liquidity
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 justify-content-center">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/lambo_marketing.png" alt="">
+                        </div>
+                        <h3>
+                            <a class="flokiHeader" href="blog-single.html">Pool Replenishment</a>
+                        </h3>
+                        <div class="text">
+                            <span style="color: #ffcb48;font-weight: bold;">2%</span> of the tokens are reverted to the
+                            Lambo Platform to be used to incentivise pools beyond the initial period.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <h5>Contact Us</h5>
-                <div class="address">
-                    <p>For support please contact an admin in our Telegram.</p>
-                    <!-- <p>Phone: (272) 211-7370</p> -->
-                    <!-- <p><span>E-Mail:</span><a href="#">support@yourbrand.com</a></p> -->
-                    <!-- <ul class="social">
+        </div>
+    </section>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <h5>$LAMBO</h5>
+                    <div class="text"><span style="font-style: italic;">"My new car will be a LAMBO"</span> ~Elon Musk
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                    <h5>Socials</h5>
+                    <ul class="footer-nav">
+                        <li><a href="https://t.me/lambofarm" target="_blank"><i class="fa fa-angle-right"></i><span>Telegram</span></a></li>
+                        <li><a href="https://twitter.com/lambofarmKCC" target="_blank"><i class="fa fa-angle-right"></i><span>Twitter</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <h5>Contact Us</h5>
+                    <div class="address">
+                        <p>For support please contact an admin in our Telegram.</p>
+                        <!-- <p>Phone: (272) 211-7370</p> -->
+                        <!-- <p><span>E-Mail:</span><a href="#">support@yourbrand.com</a></p> -->
+                        <!-- <ul class="social">
                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
                         <li><a href="#"><i class="fa fa-github-square"></i></a></li>
                     </ul> -->
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                    <h5>Disclaimer</h5>
+                    <ul class="footer-nav">
+                        <div class="address">
+                            <p>Nothing on this website is financial advice, please do your own research.</p>
+                        </div>
+                    </ul>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <h5>Disclaimer</h5>
-                <ul class="footer-nav">
-                    <div class="address">
-                        <p>Nothing on this website is financial advice, please do your own research.</p>
-                    </div>
-                </ul>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">© 2021 $LAMBO. All Rights Reserved.</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <p class="copyright">© 2021 $LAMBO. All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- ***** Footer Start ***** -->
+    </footer>
+    <!-- ***** Footer Start ***** -->
 
 
 
-<script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/scrollreveal.min.js"></script>
-<script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
 
-<script src="assets/js/custom.js"></script>
+    <script src="assets/js/custom.js"></script>
 
 
 </body>

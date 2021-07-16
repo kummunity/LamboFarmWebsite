@@ -6,6 +6,7 @@ Author: tempload - support@tempload.com
 /* ---------------------------------------------
 Table of contents
 ------------------------------------------------
+00. Lambo adjustments
 01. font & reset css
 02. preloader
 03. global styles
@@ -19,6 +20,190 @@ Table of contents
 11. contact
 12. footer
 --------------------------------------------- */
+/*
+---------------------------------------------
+Lambo adjustments
+---------------------------------------------
+*/
+body {
+    min-width: 300px;
+    /* Suppose you want minimum width of 1000px */
+    width: auto !important;
+    /* Firefox will set width as auto */
+    width: 470px;
+    /* As IE6 ignores !important it will set width as 1000px; */
+}
+
+
+
+.nav-item {
+    margin: 5px;
+}
+
+.only-own-pools .empty-pool {
+    display: none !important;
+}
+
+#pools {
+    margin-top: 0;
+}
+
+.pool--container {
+    background-color: #fbab00;
+    border-radius: 16px;
+}
+
+.pool-actions {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #4d4d4d !important;
+}
+
+.pool--container.open .pool-actions {
+    display: block;
+}
+
+.pool--container .fa-chevron-up {
+    display: none;
+}
+
+.pool--container.open .fa-chevron-up {
+    display: block;
+}
+
+.pool--container.open .fa-chevron-down {
+    display: none;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #4d4d4d;
+    z-index: 9;
+    background-position: 90% 90%;
+}
+
+.toggle-container i {}
+
+.toggle-container:hover {
+    color: #FFF;
+}
+
+.messages {
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group .form-control {
+    border-color: #4d4d4d;
+}
+
+form input[type="submit"] {
+    background-color: #4d4d4d;
+    color: #FFF;
+}
+
+
+
+
+.title {
+    padding: 0;
+}
+
+.title h5 {
+    margin-bottom: 10px !important;
+}
+
+.pool--attr {
+    border: 5px solid #fbab00;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #ffc64d;
+    margin: 0px;
+}
+
+.pool--attr-title {
+    color: #4d4d4d;
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+
+#container--info .pool--container .pool--attr-title {
+    white-space: normal;
+}
+
+.pool--attr-text {
+    color: #4d4d4d;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.pool-details {
+    display: none;
+}
+
+.ui-dialog-titlebar {
+    background-color: #fbab00;
+}
+
+.ui-widget-overlay {
+    opacity: .50 !important;
+    /* Make sure to change both of these, as IE only sees the second one */
+    filter: Alpha(Opacity=50) !important;
+
+    background: rgb(50, 50, 50) !important;
+    /* This will make it darker */
+}
+
+[class*="col-"] {
+    background-clip: padding-box;
+    border: 10px solid transparent;
+}
+
+.bg-light {
+    background-color: white !important;
+}
+
+nav .navbar-nav li a {
+    color: #fbab00 !important;
+    font-weight: bold;
+}
+
+nav .navbar-nav li a:hover {
+    color: #cea141 !important;
+}
+
+nav .navbar-brand {
+    color: #fbab00 !important;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #fbab00 !important;
+    font-weight: bold;
+    border: 0;
+}
+
+.btn-primary:hover {
+    background-color: #cea141 !important;
+}
+
+#lambo-logo-large {
+    width: 60%;
+    max-width: 1000px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
 /*
 ---------------------------------------------
 font & reset css
@@ -939,18 +1124,8 @@ welcome area
     
     height: auto;
     position: relative;
+    padding-top: 60px;
 }
-
-.welcome-area .welcome-bg {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-position: 0px 90px;
-    background-repeat: no-repeat;
-    background-size: 80%;
-}
-
 
 
 .primary-color-gradient {
@@ -958,24 +1133,9 @@ welcome area
 }
 
 
-.welcome-area .welcome-bg img {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    bottom: -1px;
-    left: 0px;
-    right: 0px;
-    z-index: 5;
-}
-
 .welcome-area .welcome-content {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    z-index: 11;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    position: relative;
+
 }
 
 .welcome-area .welcome-content h1 {
@@ -997,13 +1157,14 @@ welcome area
 }
 
 .welcome-area .welcome-content .apps {
-    padding-top: 180px;
+    
 }
 
 .welcome-area .welcome-content .apps .app-item {
+text-align: center;
     display: block;
-    float: right;
-    margin-bottom: 30px;
+   margin-left: auto;
+   margin-right: auto;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -1014,13 +1175,22 @@ welcome area
     margin-top: -10px;
     padding-bottom: 10px;
 }
+.welcome-area .welcome-content .apps .app-item .icon {
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 30px;
+    min-height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+}
 
 @media (max-width: 991px) {
+
     .welcome-area .welcome-content {
         position: relative;
         -webkit-transform: translateY(0%) !important;
         transform: translateY(0%) !important;
-        padding-top: 100px;
     }
     .welcome-area .welcome-content h1 {
         font-size: 50px !important;
@@ -1030,10 +1200,12 @@ welcome area
         margin-top: 30px;
     }
     .welcome-area .welcome-content .apps .app-item {
-        float: left;
+      
     }
     .welcome-area .welcome-content .apps .app-item .icon {
-        width: 100%;
+  
+        display: inline-block;
+        vertical-align: middle;
         margin: 0 auto;
     }
 }

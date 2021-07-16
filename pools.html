@@ -62,8 +62,7 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
             <a class="navbar-brand" href="#">$LAMBO Pools</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -72,14 +71,11 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item active"><a class="nav-link" href="pools.html">Pools</a></li>
-                    <li class="nav-item"><button class="btn btn-primary"
-                            href="https://dex.kandyswap.com/#/swap?inputCurrency=KCS&outputCurrency=0x041a33502ba2ab0d73f400564cfaa696b2ac8b64"
-                            target="_blank">BUY $LAMBO</button></li>
+                    <li class="nav-item"><button class="btn btn-primary" href="https://dex.kandyswap.com/#/swap?inputCurrency=KCS&outputCurrency=0x041a33502ba2ab0d73f400564cfaa696b2ac8b64" target="_blank">BUY $LAMBO</button></li>
                 </ul>
             </div>
             <!-- ***** Menu End ***** -->
         </nav>
-
     </header>
     <!-- ***** Header Area End ***** -->
 
@@ -131,8 +127,7 @@
                                         <input type="radio" name="pools_switch" value="0" id="pools_switch_0" checked />
                                         <label for="pools_switch_0">All Pools</label>
                                         &nbsp;&nbsp;&nbsp;
-                                        <input type="radio" name="pools_switch" value="1" id="pools_switch_1" /> <label
-                                            for="pools_switch_1">My Pools</label>
+                                        <input type="radio" name="pools_switch" value="1" id="pools_switch_1" /> <label for="pools_switch_1">My Pools</label>
                                     </div>
                                 </div>
                             </div>
@@ -164,10 +159,8 @@
                 <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                     <h5>Socials</h5>
                     <ul class="footer-nav">
-                        <li><a href="https://t.me/lambofarm" target="_blank"><i
-                                    class="fa fa-angle-right"></i><span>Telegram</span></a></li>
-                        <li><a href="https://twitter.com/lambofarmKCC" target="_blank"><i
-                                    class="fa fa-angle-right"></i><span>Twitter</span></a></li>
+                        <li><a href="https://t.me/lambofarm" target="_blank"><i class="fa fa-angle-right"></i><span>Telegram</span></a></li>
+                        <li><a href="https://twitter.com/lambofarmKCC" target="_blank"><i class="fa fa-angle-right"></i><span>Twitter</span></a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
@@ -204,183 +197,7 @@
     <!-- ***** Footer Start ***** -->
 
     <style>
-        body {
-            min-width: 300px;
-            /* Suppose you want minimum width of 1000px */
-            width: auto !important;
-            /* Firefox will set width as auto */
-            width: 470px;
-            /* As IE6 ignores !important it will set width as 1000px; */
-        }
 
-
-
-        .nav-item {
-            margin: 5px;
-        }
-
-        .only-own-pools .empty-pool {
-            display: none !important;
-        }
-
-        #pools {
-            margin-top: 0;
-        }
-
-        .pool--container {
-            background-color: #fbab00;
-            border-radius: 16px;
-        }
-
-        .pool-actions {
-            margin-top: 5px;
-            padding-top: 5px;
-            border-top: 1px solid #4d4d4d !important;
-        }
-
-        .pool--container.open .pool-actions {
-            display: block;
-        }
-
-        .pool--container .fa-chevron-up {
-            display: none;
-        }
-
-        .pool--container.open .fa-chevron-up {
-            display: block;
-        }
-
-        .pool--container.open .fa-chevron-down {
-            display: none;
-        }
-
-        .toggle-container {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            color: #4d4d4d;
-            z-index: 9;
-            background-position: 90% 90%;
-        }
-
-        .toggle-container i {}
-
-        .toggle-container:hover {
-            color: #FFF;
-        }
-
-        .messages {
-            margin-bottom: 0;
-            padding-top: 10px;
-        }
-
-        .form-group {
-            position: relative;
-        }
-
-        .form-group .form-control {
-            border-color: #4d4d4d;
-        }
-
-        form input[type="submit"] {
-            background-color: #4d4d4d;
-            color: #FFF;
-        }
-
-
-
-
-        .title {
-            padding: 0;
-        }
-
-        .title h5 {
-            margin-bottom: 10px !important;
-        }
-
-        .pool--attr {
-            border: 5px solid #fbab00;
-            text-align: center;
-            border-radius: 20px;
-            background-color: #ffc64d;
-            margin: 0px;
-        }
-
-        .pool--attr-title {
-            color: #4d4d4d;
-            font-size: 1.1em;
-            white-space: nowrap;
-        }
-
-        #container--info .pool--container .pool--attr-title {
-            white-space: normal;
-        }
-
-        .pool--attr-text {
-            color: #4d4d4d;
-            font-weight: bold;
-            overflow: hidden;
-        }
-
-        .pool-details {
-            display: none;
-        }
-
-        .ui-dialog-titlebar {
-            background-color: #fbab00;
-        }
-
-        .ui-widget-overlay {
-            opacity: .50 !important;
-            /* Make sure to change both of these, as IE only sees the second one */
-            filter: Alpha(Opacity=50) !important;
-
-            background: rgb(50, 50, 50) !important;
-            /* This will make it darker */
-        }
-
-        [class*="col-"] {
-            background-clip: padding-box;
-            border: 10px solid transparent;
-        }
-
-        .bg-light {
-            background-color: white !important;
-        }
-
-        nav .navbar-nav li a {
-            color: #fbab00 !important;
-            font-weight: bold;
-        }
-
-        nav .navbar-nav li a:hover {
-            color: #cea141 !important;
-        }
-
-        nav .navbar-brand {
-            color: #fbab00 !important;
-            font-weight: bold;
-        }
-
-        .btn-primary {
-            background-color: #fbab00 !important;
-            font-weight: bold;
-            border: 0;
-        }
-
-        .btn-primary:hover {
-            background-color: #cea141 !important;
-        }
-
-        #lambo-logo-large {
-            width: 60%;
-            max-width: 1000px;
-            margin-top: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
     </style>
 
 
@@ -409,8 +226,7 @@
 
 
     </script>
-    <div id="pool-details-dialog" class="modal fade" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div id="pool-details-dialog" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -427,13 +243,11 @@
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <button class="btn--stake-max btn btn-outline-secondary"
-                                                    type="button">Max</button>
+                                                <button class="btn--stake-max btn btn-outline-secondary" type="button">Max</button>
                                             </div>
                                             <input type="text" class="form-control" placeholder="Amount" name="amount">
                                             <div class="input-group-append">
-                                                <input type="submit" class="form-control btn btn-outline-secondary"
-                                                    value="Stake" />
+                                                <input type="submit" class="form-control btn btn-outline-secondary" value="Stake" />
                                             </div>
                                         </div>
                                         <div style="text-align: center;"><small>1% deposit fee</small></div>
@@ -445,13 +259,11 @@
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <button class="btn--unstake-max btn btn-outline-secondary"
-                                                    type="button">Max</button>
+                                                <button class="btn--unstake-max btn btn-outline-secondary" type="button">Max</button>
                                             </div>
                                             <input type="text" class="form-control" placeholder="Amount" name="amount">
                                             <div class="input-group-append">
-                                                <input type="submit" class="form-control btn btn-outline-primary"
-                                                    value="Withdraw" />
+                                                <input type="submit" class="form-control btn btn-outline-primary" value="Withdraw" />
                                             </div>
                                         </div>
                                         <div style="text-align: center;"><small>No withdraw fee</small></div>
