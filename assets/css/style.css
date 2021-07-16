@@ -110,8 +110,25 @@ form input[type="submit"] {
 }
 
 
-
-
+.token-logo-container{
+    position:relative; 
+    width: 50px;
+    height: 30px; 
+    display: inline-block;
+}
+.token-logo-1, .token-logo-2{
+    width: 30px; 
+    height: auto;
+    padding:0px;
+    margin:0px;
+    position: absolute;
+    left:0;
+    top: 0;
+}
+.token-logo-2
+{
+    left: 20px;
+}
 .title {
     padding: 0;
 }

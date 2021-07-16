@@ -36,7 +36,9 @@ const addPools = function () {
             $(card).attr("data-pool", poolId);
             var tokenId = stakingToken.address ? stakingToken.address : stakingToken.symbol;
             $(card).find('#data-token-store').attr('data-token', tokenId);
-            $(card).find('#token-symbol').text('$' + pool.stakingToken);
+            $(card).find('#token-symbol').text(pool.stakingToken);
+            $(card).find('.token-logo-1').attr('src', '/assets/images/tokens/' + pool.stakingToken + '.png');
+            $(card).find('.token-logo-2').attr('src', '/assets/images/tokens/' + pool.rewardToken + '.png');
             $(card).find('.display--user-balance').attr('data-token', tokenId);
             $('#container--pools').append(card);
 
