@@ -568,7 +568,7 @@ const updatePool = function (address) {
                 }
             }
         }
-        apr = fv(apr);
+        apr = Math.round(apr) + "%";
 
         $('*[data-pool="' + getPoolId(pool) + '"] .display--apr').html(apr);
         var tvl = getTVL(pool);
@@ -581,6 +581,10 @@ const updateInfo = function () {
     var value = '-';
     if (price) {
         value = fvd(price, 5) + ' KCS';
+        if (kcs_usd_price > 0) {
+            value += "<br />";
+            value += '$' + fvd(price * kcs_usd_price, 5);
+        }
     }
     $('.display--lambo-price').html(value);
     var totalTVL = 0;
@@ -588,7 +592,12 @@ const updateInfo = function () {
         totalTVL += getTVL(pools[i]);
     }
     if (totalTVL > 0) {
-        $('.display--total-tvl').html(fv(totalTVL) + ' KCS');
+        value = fv(totalTVL) + ' KCS';
+        if (kcs_usd_price > 0) {
+            value += "<br />";
+            value += '$' + fv(totalTVL * kcs_usd_price);
+        }
+        $('.display--total-tvl').html(value);
     }
 
     var totalRewards = 0;
@@ -596,7 +605,12 @@ const updateInfo = function () {
         totalRewards += weiToDecimal(userRewardsPools[pools[i].address], pools[i].rewardToken);
     }
     if (totalRewards > 0) {
-        $('.display--total-rewards').html(fv(totalRewards) + ' LAMBO');
+        value = fv(totalRewards) + ' LAMBO';
+        if (kcs_usd_price > 0) {
+            value += "<br />";
+            value += '$' + fv(totalRewards * price * kcs_usd_price);
+        }
+        $('.display--total-rewards').html(value);
     }
 }
 

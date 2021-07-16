@@ -121,13 +121,15 @@
                                         <a href="#" class="btn btn-outline-dark btn-block btn--claim-all">Claim All</a>
                                         <div class="messages"></div>
                                     </div>
-                                    <div class="col-lg-4 col-12 " style="text-align: center;">
-                                        Show
-                                        <br>
-                                        <input type="radio" name="pools_switch" value="0" id="pools_switch_0" checked />
-                                        <label for="pools_switch_0">All Pools</label>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <input type="radio" name="pools_switch" value="1" id="pools_switch_1" /> <label for="pools_switch_1">My Pools</label>
+                                    <div class="col-lg-4 col-12">
+                                        <div class="input-group justify-content-center">
+                                            <div class="input-group-prepend">
+                                                <button class="btn--unstake-max btn btn-success pools-switch" id="pools_switch_0" value="0">All Pools</button>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button class="form-control btn btn-secondary pools-switch" id="pools_switch_1" value="1">My Pools</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -196,11 +198,6 @@
     </footer>
     <!-- ***** Footer Start ***** -->
 
-    <style>
-
-    </style>
-
-
     <script src="assets/js/jquery-2.1.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -212,20 +209,11 @@
 
     <script src="assets/js/custom.js"></script>
 
+    <script src="/tools.js"></script>
+    <script src="/farm.js"></script>
+    <script src="/config.js"></script>
+    <script src="/config_init.js"></script>
 
-    <script src="tools.js"></script>
-    <script src="farm.js"></script>
-    <script src="config.js"></script>
-    <script src="config_init.js"></script>
-
-
-    <script type="text/javascript">
-
-
-
-
-
-    </script>
     <div id="pool-details-dialog" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">

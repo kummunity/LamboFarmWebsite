@@ -1,4 +1,24 @@
 
+var kcs_usd_price = 0.00;
+
+
+const queryKCSPrice = function () {
+    /*
+    https://www.coingecko.com/api/documentations/v3#/simple/get_simple_price
+    Return: 
+        {
+            "kucoin-shares": {
+                "usd": 10.79,
+                "last_updated_at": 1626422864
+            }
+        }
+    */
+    $.getJSON("https://api.coingecko.com/api/v3/simple/price?ids=kucoin-shares&vs_currencies=usd&include_market_cap=false&include_24hr_vol=false&include_24hr_change=false&include_last_updated_at=true", function (data) {
+        kcs_usd_price = data['kucoin-shares'].usd;
+    });
+
+};
+
 const addPools = function () {
     $.get("./tpl_card.html", function (card_content) {
         for (var i = 0; i < pools.length; i++) {
@@ -40,6 +60,8 @@ $(document).ready(function () {
             });
         }
     });*/
+    queryKCSPrice();
+    setInterval(queryKCSPrice, 1000 * 60 * 10); //Query KCS price every 10 minutes
     connectWallet();
     addPools();
     initEvents();
@@ -290,12 +312,23 @@ const initEvents = function () {
         return false;
     });
 
-    $('#pools').on('change', 'input[name="pools_switch"]', function (e) {
+    $('#pools').on('click', '.pools-switch', function (e) {
         if ($(e.target).val() == 0) {
             $('#container--pools').removeClass('only-own-pools');
+            $('#pools_switch_1').removeClass('btn-success');
+            $('#pools_switch_0').addClass('btn-success');
+
+            $('#pools_switch_1').addClass('btn-secondary');
+            $('#pools_switch_0').removeClass('btn-secondary');
         } else {
             $('#container--pools').addClass('only-own-pools');
+            $('#pools_switch_0').removeClass('btn-success');
+            $('#pools_switch_1').addClass('btn-success');
+
+            $('#pools_switch_0').addClass('btn-secondary');
+            $('#pools_switch_1').removeClass('btn-secondary');
         }
+        $(e.target).blur();
     });
 };
 var claimAllPools = [];
